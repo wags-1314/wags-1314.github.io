@@ -3,46 +3,15 @@
 
 ## Overview
 
-anemone theme is designed to provide a nearly no-JavaScript, efficient, and minimalist experience for your website. Embracing simplicity, the theme focuses on content and readability, ensuring a seamless user experience without unnecessary distractions.
+Hi, I am Bhargav Kulkarni, a Computer Science Master's student at the University of Utah. I am currently working with [Prof. Pavel Panchekha](https://pavpanchekha.com/) at the University of Utah on generating English explanations for floating point expressions. In the past I worked on adapting the Coq interactive theorem prover to education settings at the BITS Pilani, with Prof. Anup Basil Mathew. I am interested in everything computers, with a particular interest in programming languages.
 
-> *"Useless blockquote"*
-
-## Blog Posts
-
-Explore our insightful blog posts on a variety of topics:
-
-- 🥣 [Overview Post](./blog/overview-post)
-- 🥣 [Overview Post But in French](./fr/blog/overview-post)
-- 🈚 [Language Tests](./blog/language-tests)
-- 🔥 [Very Very Very Long Title And Very Very Very Short Content](./blog/very-very-very-long-title-and-very-very-very-short-content)
-- 📺 [Post Example With Headings And TOC](./blog/post-example-with-headings-and-toc)
-
-## Tags
-
-Browse our posts by tags:
-
-- [example](./tags/example)
-
-## Another List
-
-Discover additional content:
-
-- With Subitems
-  - With Subsubitems
-  - [Example Page](./about)
-- this list is just the content of `content/_index.md`, the tests are shamelessly stolen from [no style, please!](https://www.getzola.org/themes/no-style-please/)
+> Once you learn to read, you will be forever free.
+> 
+> &mdash; <cite>Frederick Douglass</cite>
 
 ## Online Presence
 
-Stay connected with us:
+Stay connected with me:
 
-- Email: [jgll6dij6@mozmail.com](mailto:jgll6dij6@mozmail.com)
-- Code Repositories: [Speyll@GitHub](https://github.com/Speyll)
-- @Speyll anywhere else.
-
-## Webrings
-
-Join our webrings and explore more:
-
-- 🈯 {{ webring(prev="#", webring="#", webringName="Random Webring", next="#") }}
-- 🎶 {{ webring(prev="#", webring="#", webringName="Another Webring", next="#") }}
+- Email: [bhargavkishork@gmail.com](mailto:bhargavkishork@gmail.com)
+- Code Repositories: [wags-1314@GitHub](https://github.com/wags-1314)

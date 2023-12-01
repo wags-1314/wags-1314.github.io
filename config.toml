@@ -4,8 +4,16 @@ build_search_index = false
 
 theme = "anemone"
 
+taxonomies = [{name = "tags", feed = true}]
+
 [markdown]
 highlight_code = false
 
 [extra]
 default_theme = "dark"
+
+header_nav = [
+	   { url = "/", name_en = "/home/" },
+	   { url = "/about", name_en = "/about/" },
+	   { url = "/blog", name_en = "/blog/" }
+]
