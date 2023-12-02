@@ -1,52 +1,52 @@
 :root,
 :root.light {
-  --bgColor: #EEEEEE;
-  --fgColor: #41474E;
-  --metaColor: #D26878;
+  --bgColor: #fdf6e3;
+  --fgColor: #657b83;
+  --metaColor: #cb4b16;
   --headColor: #;
-  --linkColor: #5690AF;
+  --linkColor: #268bd2;
   --hovColor: #22453F;
-  --bgSelect: #FFFAE1;
+  --bgSelect: #eee8d5;
   --bgUrl: url(https://i.ibb.co/Qpkrw4V/tile-Light.webp) repeat;
-  --red: #D26878;
-  --dimRed: #623039;
-  --orange: #e08f67;
-  --dimOrange: #926048;
-  --yellow: #FFFAE1;
-  --dimYellow: #D5C5A1;
-  --green: #56AFA0;
-  --dimGreen: #22453F;
-  --blue: #5690AF;
-  --dimBlue: #223844;
-  --purple: #9271D6;
-  --dimPurple: #47356C;
-  --grey: #CBCDCD;
-  --dimGrey: #646868
+  --red: #dc322f;
+  --dimRed: #dc322f;
+  --orange: #cb4b16;
+  --dimOrange: #cb4b16;
+  --yellow: #b58900;
+  --dimYellow: #b58900;
+  --green: #859900;
+  --dimGreen: #859900;
+  --blue: #268bd2;
+  --dimBlue: #268bd2;
+  --purple: #d33682;
+  --dimPurple: #d33682;
+  --grey: #93a1a1;
+  --dimGrey: #93a1a1
 }
 
 :root.dark {
-  --bgColor: #222529;
-  --fgColor: #D6D6D6;
-  --metaColor: #78B6AD;
+  --bgColor: #002b36;
+  --fgColor: #839496;
+  --metaColor: #dc322f;
   --headColor: #;
-  --linkColor: #DBD5BC;
-  --hovColor: #E2AEA2;
-  --bgSelect: #464949;
+  --linkColor: #268bd2;
+  --hovColor: #22453f;
+  --bgSelect: #073642;
   --bgUrl: url(https://i.ibb.co/LzrFBFJ/tileDark.webp) repeat;
-  --red: #CD909B;
-  --dimRed: #684249;
-  --orange: #E2AEA2;
-  --dimOrange: #704941;
-  --yellow: #DBD5BC;
-  --dimYellow: #6F6847;
-  --green: #78B6AD;
-  --dimGreen: #3E615C;
-  --blue: #87C9E5;
-  --dimBlue: #38494F;
-  --purple: #CEA7DE;
-  --dimPurple: #5E406A;
-  --grey: #CBCDCD;
-  --dimGrey: #464949
+  --red: #dc322f;
+  --dimRed: #dc322f;
+  --orange: #cb4b16;
+  --dimOrange: #cb4b16;
+  --yellow: #b58900;
+  --dimYellow: #b58900;
+  --green: #859900;
+  --dimGreen: #859900;
+  --blue: #268bd2;
+  --dimBlue: #268bd2;
+  --purple: #d33682;
+  --dimPurple: #d33682;
+  --grey: #586e75;
+  --dimGrey: #586e75
 }
 
 ::-moz-selection {
