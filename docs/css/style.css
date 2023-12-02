@@ -1,5 +1,5 @@
 :root,
-:root.light {
+:root.dark {
   --bgColor: #fdf6e3;
   --fgColor: #657b83;
   --metaColor: #cb4b16;
@@ -24,7 +24,7 @@
   --dimGrey: #93a1a1
 }
 
-:root.dark {
+:root.light {
   --bgColor: #002b36;
   --fgColor: #839496;
   --metaColor: #dc322f;
