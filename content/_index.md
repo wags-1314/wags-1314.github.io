@@ -7,7 +7,7 @@ Hi, I am Bhargav Kulkarni, a Computer Science Master's student at the University
 
 > Once you learn to read, you will be forever free.
 > 
-> &mdash; <cite>Frederick Douglass</cite>
+> &mdash; [<cite>Frederick Douglass</cite>](https://en.wikipedia.org/wiki/Frederick_Douglass)
 
 ## Online Presence
 
