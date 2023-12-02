@@ -2,6 +2,8 @@ base_url = "https://wags-1314.github.io"
 compile_sass = true
 build_search_index = false
 
+title = "SolarPunk"
+
 theme = "anemone"
 
 taxonomies = [{name = "tags", feed = true}]
