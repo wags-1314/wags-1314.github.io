@@ -107,6 +107,14 @@ a {
   color: var(--linkColor);
 }
 
+.callout {
+  max-width: 90%;
+  height: auto;
+  margin: .2rem;
+  padding: .2rem;
+  border: dashed .2rem var(--metaColor)
+}
+
 a:focus,
 a:hover {
   background-color: var(--linkColor);
@@ -152,9 +160,12 @@ hr {
   border: 1px dashed
 }
 
-img {
+img:not(#bare) {
+  display: block;
   max-width: 90%;
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin: .2rem;
   padding: .2rem;
   border: dashed .2rem var(--metaColor);

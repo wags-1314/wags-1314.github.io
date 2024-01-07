@@ -16,6 +16,6 @@ default_theme = "dark"
 
 header_nav = [
 	   { url = "/", name_en = "/home/" },
-	   { url = "/about", name_en = "/about/" },
+	   { url = "/cv", name_en = "/CV/" },
 	   { url = "/blog", name_en = "/blog/" }
 ]

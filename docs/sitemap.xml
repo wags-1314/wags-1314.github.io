@@ -4,9 +4,6 @@
         <loc>https://wags-1314.github.io/</loc>
     </url>
     <url>
-        <loc>https://wags-1314.github.io/about/</loc>
-    </url>
-    <url>
         <loc>https://wags-1314.github.io/blog/</loc>
     </url>
     <url>
@@ -19,6 +16,9 @@
     <url>
         <loc>https://wags-1314.github.io/blog/pltut-1/</loc>
         <lastmod>2023-12-01</lastmod>
+    </url>
+    <url>
+        <loc>https://wags-1314.github.io/cv/</loc>
     </url>
     <url>
         <loc>https://wags-1314.github.io/tags/</loc>
