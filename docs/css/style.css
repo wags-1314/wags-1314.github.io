@@ -1,52 +1,52 @@
 :root,
-:root.dark {
-  --bgColor: #fdf6e3;
-  --fgColor: #657b83;
-  --metaColor: #cb4b16;
+:root.light {
+  --bgColor: #2e3440;
+  --fgColor: #d8dee9;
+  --metaColor: #bf616a;
   --headColor: #;
-  --linkColor: #268bd2;
-  --hovColor: #22453F;
-  --bgSelect: #eee8d5;
+  --linkColor: #5E81AC;
+  --hovColor: #8FBCBB;
+  --bgSelect: #4C566A;
   --bgUrl: url(https://i.ibb.co/Qpkrw4V/tile-Light.webp) repeat;
-  --red: #dc322f;
-  --dimRed: #dc322f;
-  --orange: #cb4b16;
-  --dimOrange: #cb4b16;
-  --yellow: #b58900;
-  --dimYellow: #b58900;
-  --green: #859900;
-  --dimGreen: #859900;
-  --blue: #268bd2;
-  --dimBlue: #268bd2;
-  --purple: #d33682;
-  --dimPurple: #d33682;
-  --grey: #93a1a1;
-  --dimGrey: #93a1a1
+  --red: #bf616a;
+  --dimRed: #bf616a;
+  --orange: #d08770;
+  --dimOrange: #d08770;
+  --yellow: #ebcb8b;
+  --dimYellow: #ebcb8b;
+  --green: #A3BE8C;
+  --dimGreen: #A3BE8C;
+  --blue: #88c0d0;
+  --dimBlue: #88c0d0;
+  --purple: #b48ead;
+  --dimPurple: #b48ead;
+  --grey: #e5e9f0;
+  --dimGrey: #e5e9f0
 }
 
-:root.light {
-  --bgColor: #002b36;
-  --fgColor: #839496;
-  --metaColor: #dc322f;
+:root.dark {
+  --bgColor: #d8dee9;
+  --fgColor: #2e3440;
+  --metaColor: #bf616a;
   --headColor: #;
-  --linkColor: #268bd2;
-  --hovColor: #22453f;
-  --bgSelect: #073642;
-  --bgUrl: url(https://i.ibb.co/LzrFBFJ/tileDark.webp) repeat;
-  --red: #dc322f;
-  --dimRed: #dc322f;
-  --orange: #cb4b16;
-  --dimOrange: #cb4b16;
-  --yellow: #b58900;
-  --dimYellow: #b58900;
-  --green: #859900;
-  --dimGreen: #859900;
-  --blue: #268bd2;
-  --dimBlue: #268bd2;
-  --purple: #d33682;
-  --dimPurple: #d33682;
-  --grey: #586e75;
-  --dimGrey: #586e75
+  --linkColor: #5E81AC;
+  --hovColor: #8FBCBB;
+  --bgSelect: #4C566A;
+  --bgUrl: url(https://i.ibb.co/Qpkrw4V/tile-Light.webp) repeat;
+  --red: #bf616a;
+  --dimRed: #bf616a;
+  --orange: #d08770;
+  --dimOrange: #d08770;
+  --yellow: #ebcb8b;
+  --dimYellow: #ebcb8b;
+  --green: #A3BE8C;
+  --dimGreen: #A3BE8C;
+  --blue: #88c0d0;
+  --dimBlue: #88c0d0;
+  --purple: #b48ead;
+  --dimPurple: #b48ead;
+  --grey: #e5e9f0;
+  --dimGrey: #e5e9f0
 }
 
 ::-moz-selection {

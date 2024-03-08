@@ -2,87 +2,46 @@
 title = "Bhargav Kulkarni"
 +++
 
+I'm a Ph.D. student advised by Prof. Pavel Panchekha at the University of Utah. I am interested in making it easy for devlopers to write correct and safe code.
+
 - Email: [bhargavkishork@gmail.com](mailto:bhargavkishork@gmail.com)
 - Github: [wags-1314@github](https://github.com/wags-1314)
+- Website: [wags-1314.github.io](wags-1314.github.io)
 - Phone Number: +1-810-292-4167
 <!-- Add LinkedIn link -->
 
-# Education
-### MS in CS @ The University of Utah
-- CGPA: 4.0/4.0
-### BEng in CS @ Birla Institute of Technology and Sciences, Pilani
-- CGPA: 8.9/10.0
-- Merit Scholarship holder
+# Research
+### Herbie Project [(source)](https://github.com/herbie-fp/herbie)
+- Working on finding and explaining errors in floating point programs
 
-# Work Experiences
-### Graduate Research Assistant @ The University of Utah
-- Researching ways to automatically explain sources of errors in floating point operations.
-- Currently working on extending the [Herbie](https://github.com/herbie-fp/herbie) tool to generate English explanations for errors.
+### HCFC Lab @ BITS Pilani, Goa
+- Developed a portable Indian Sign Language translator
+- Explored using beam search and hidden Markov models, conducted user study
 
-### Teaching Assistant @ The University of Utah
-- Worked as a graduate teaching assistant for the course CS 3810: Computer Organization.
-- Responsibilities included conducting office hours and grading assignments.
-	
-### Teaching Assistant @ BITS Pilani, Goa Campus
-- TA for several courses: Operating Systems(twice), Compiler Construction, Computer Networks, Computer Architecture, VLSI Design(Graduate Course), Discrete Structures for Computer Science, Computer Programming.
+### Automatons
+- Worked with Prof. Anup Basil Mathew(BITS Pilani) and Prof. S P Suresh(Chennai Mathematical Institute)
+- Formalised basic DFA/NFA constructions in Coq/Rocq
+- Some initial work adapted into undergraduate Discrete Structures course
 
-### Intern @ Stem4All
-- Worked as an intern at STEM4ALL, a non-profit 501(c)(3) organization focused on STEM skills development of youth.
-- Designed, conducted, and taught a week-long Python and Virtual Robotics Summer Camp for 3rd to 6th-grade students in the
-US
+### Education
+**Ph.D. in CS &mdash; University of Utah**
+- **CGPA:** 4.0/4.0; courses: PL, architecture, algorithms, verification
+- TA for CS 3810: Computer Organization
 
-# Projects
-### Indian Sign Language Translator, with Prof. Sougata Sen @ BITS Pilani, Goa
-- Research involved conversing with actual Indian Sign Language users at a disabilities school to learn the semantics and usage of Indian Sign Language, and to gauge interest in a portable translator.
-- Investigated ways, included beam search and Hidden Markov Models, to predict how signed gestures transition between each other.
+**B.E. in CSE &mdash; BITS Pilani, Goa**
+- **CGPA:** 8.9/10.0; Merit scholarship holder
+- TA for: OS, compilers, networks, architecture, VLSI design, and more
 
-### Formalizing automatons with Prof. SP Suresh and Prof. Anup Basil Mathew @ Chennai Mathematical Institute
-- A summer project to formalize some basic theorems on DFAs and NFAs in the Coq Proof Assistant.
-- Proved some basic operations on DFAs, like the construction of complement, union and intersection.
-- Proved construction of NFAs from DFAs and DFAs from NFAs, and as a consequence proved their equivalence.
+### Skills
+**General Programming:** Python, Racket, Java, JavaScript, SQL
 
-### Natural Deduction Proof Checker, [source](https://github.com/wags-1314/nat-deduct/)
-- An educational tool to help second-year students write proofs in Natural Deduction correctly.
-- Currently supports propositional logic only.
-- Each proof statement needs a justification attached to it.
+**Systems Programming:** C/C++, Bash, Rust
 
-### Trinity Game Engine, [source](https://github.com/wags-1314/trinity/)
-- A game engine bundled with a VM-interpreted language.
-- The Core language is compiled into a custom byte-code, which is then interpreted by a handwritten virtual machine.
-- The compiled byte-code is then connected to the game engine, and instructions control what is drawn on the screen
+**Hardware:** Verilog, MASM
 
-### Logic in Coq, [source](https://github.com/wags-1314/logic-in-Coq)
-- A formalization of classical propositional logic in Coq, along with a formalization and proof of the soundness of Natural
-Deduction for propositional logic in Coq.
+### Projects
+**Trinity Game Engine:** A game engine and byte code VM for scripting [(source)](https://github.com/wags-1314/trinity)
 
-### Adapting proof assistants into CS courses with Prof. Anup Basil Mathew @ BITS Pilani, Goa
-- Worked on the Coq Proof Assistant and its applications in formalizing mathematics and algorithms.
-- Some theoretical parts of our discussion about the constructive logic of Coq were adapted into future offerings of Prof. Anup Basil Matthew's Discrete Structures in Computer Science course.
+**Logic in Coq:** Classical propositional logic and natural deduction in Coq/Rocq [(source)](https://github.com/wags-1314/logic-in-Coq)
 
-### CheemScheme, [source](https://github.com/wags-1314/cheem-scheme)
-- This is a dialect of Scheme implemented in C++.
-- Currently supports arithmetic operations, variables and state, conditional branching, and lambdas.
-- The interpreter also optimizes tail recursion and can identify and report syntax and runtime errors.
-
-# Positions of Responsibility
-### Core Member of the Literary and Debate Club @ BITS Pilani, Goa
-- Organized Inverse, a national-level slam poetry contest.
-
-### Sub Coordinator of the Quiz Club @ BITS Pilani, Go
-- Conducted regular quizzes for club members.
-
-### Mess Representative @ BITS Pilani, Goa
-- Was responsible for being a point of contact between the campus administration, mess contractors, and students.
-- Frequently met with students to address their grievances about food in the mess.
-
-# Skills
-### Languages
-- English, Hindi, Marathi, Kannada
-
-### Programming languages known:
-- Python, Racket, Coq, C/C++, Java, \LaTeX, Lisp/Scheme, Verilog, MASM, Javascript, SQL.
-
-### Tools/Environments known:
-- Bash Scripting, beautifulsoup4, Django, flex/bison, LLVM.
-
-
+**CheemScheme:** Scheme dialect in C++ with tail recursion and error reporting [(source)](https://github.com/wags-1314/cheem-scheme/tree/C++)
