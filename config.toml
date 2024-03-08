@@ -12,7 +12,7 @@ taxonomies = [{name = "tags", feed = true}]
 highlight_code = false
 
 [extra]
-default_theme = "dark"
+default_theme = "light"
 
 header_nav = [
 	   { url = "/", name_en = "/home/" },
