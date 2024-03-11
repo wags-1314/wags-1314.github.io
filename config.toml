@@ -9,7 +9,10 @@ theme = "anemone"
 taxonomies = [{name = "tags", feed = true}]
 
 [markdown]
-highlight_code = false
+highlight_code = true
+highlight_theme = "nord"
+render_eoji = true
+smart_punctuation = true
 
 [extra]
 default_theme = "light"

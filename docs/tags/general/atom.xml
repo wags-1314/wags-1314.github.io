@@ -22,7 +22,10 @@
         <link rel="alternate" type="text/html" href="https://wags-1314.github.io/blog/first-blog/"/>
         <id>https://wags-1314.github.io/blog/first-blog/</id>
         
-        <content type="html" xml:base="https://wags-1314.github.io/blog/first-blog/">&lt;p&gt;I don&#x27;t have much to write, but I really want to get back into writing about stuff that I care about. I feel that I will first need to get back into the groove of &lt;em&gt;doing&lt;&#x2F;em&gt; things like coding and reading books to start having things to write about. Keep a look out for new stuff here.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://wags-1314.github.io/blog/first-blog/">&lt;aside&gt;
+  An aside. A **bold** aside.
+&lt;&#x2F;aside&gt;
+&lt;p&gt;I don’t have much to write, but I really want to get back into writing about stuff that I care about. I feel that I will first need to get back into the groove of &lt;em&gt;doing&lt;&#x2F;em&gt; things like coding and reading books to start having things to write about. Keep a look out for new stuff here.&lt;&#x2F;p&gt;
 </content>
         
     </entry>

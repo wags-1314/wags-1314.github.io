@@ -103,53 +103,55 @@
 
 <h2 id="making-a-programming-language">Making a Programming Language</h2>
 <p>I think I finally have something to write about. While I am not an <em>expert</em> with programming languages, interpreters or compilers, I feel like it would be great to:</p>
+<pre data-lang="python" style="background-color:#2e3440;color:#d8dee9;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#88c0d0;">print</span><span>(</span><span style="color:#a3be8c;">&#39;Hello, World!&#39;</span><span>)
+</span></code></pre>
 <ol>
 <li>put down in writing everything I know currently about programming languages,</li>
 <li>share to world everything I know.</li>
 </ol>
-<p>I also feel trying to write this down in an instructive way will help me to reinforce a lot of the stuff I have learned. And I love explaining stuff (it's a lot of fun!). I recently took a course on Programming Languages by <a href="https://en.wikipedia.org/wiki/Matthew_Flatt">Mathew</a> <a href="https://users.cs.utah.edu/~mflatt/">Flatt</a>, one of the creators of the really neat <a href="https://racket-lang.org/">Racket</a> programming language, and I'd like to re-implement a lot of the stuff I learned in the course.</p>
+<p>I also feel trying to write this down in an instructive way will help me to reinforce a lot of the stuff I have learned. And I love explaining stuff (it’s a lot of fun!). I recently took a course on Programming Languages by <a href="https://en.wikipedia.org/wiki/Matthew_Flatt">Mathew</a> <a href="https://users.cs.utah.edu/~mflatt/">Flatt</a>, one of the creators of the really neat <a href="https://racket-lang.org/">Racket</a> programming language, and I’d like to re-implement a lot of the stuff I learned in the course.</p>
 <h2 id="what-is-a-programming-language">What is a Programming Language?</h2>
 <blockquote>
 <p>A programming language is a system of notation for writing computer programs.</p>
 <p>— Wikipedia, The Free Encyclopedia</p>
 </blockquote>
-<p>A programming language is the primary interface with which humans tell computers what to do. A computer program is the list of instructions and a programming language is the <em>specification</em> of what those instructions look like. A computer, being an amalgamation of horrendous digital electronics, can only understand binary data, and a human understands &quot;language&quot;. <em>Compilers</em> and <em>interpreters</em> follow the specification, which is the programming language, and either:</p>
+<p>A programming language is the primary interface with which humans tell computers what to do. A computer program is the list of instructions and a programming language is the <em>specification</em> of what those instructions look like. A computer, being an amalgamation of horrendous digital electronics, can only understand binary data, and a human understands “language”. <em>Compilers</em> and <em>interpreters</em> follow the specification, which is the programming language, and either:</p>
 <ol>
 <li><em>compile</em> our program into assembly,</li>
-<li>or <em>interpret</em> and &quot;act out&quot; how the program is supposed to run on the computer.</li>
+<li>or <em>interpret</em> and “act out” how the program is supposed to run on the computer.</li>
 </ol>
 <p>In this tutorial, I want to talk about both <em>interpreters</em> and <em>compilers</em> and try to cover as many paradigms and techniques under the umbrella of programming languages as I can. We will build so many <em>interpreters</em> and <em>compilers</em> your head will spin.</p>
 <h2 id="brim">Brim</h2>
 <blockquote>
-<p>Life's enchanted cup sparkles near the brim.</p>
+<p>Life’s enchanted cup sparkles near the brim.</p>
 <p>— <a href="https://en.wikipedia.org/wiki/Lord_Byron">Lord Byron</a></p>
 </blockquote>
 <p>The language we will be building stuff for is called <strong>Brim</strong>. I named it <strong>Brim</strong> because I want it to be filled to the <strong>brim</strong> with ✨features✨. The specification of <strong>Brim</strong> is very very simple. Here is the factorial function in <strong>Brim</strong>:</p>
-<pre><code>(fun (factorial x)
-     (if (= n 1) &#x2F;&#x2F;if n == 1
-         1 &#x2F;&#x2F; then return 1  
-         (* n (factorial (- n 1))))) &#x2F;&#x2F; else return n * (n - 1)!
-</code></pre>
-<p><strong>Brim</strong> is just lists of numbers and symbols. That's it. The consequence of <strong>Brim</strong> being this simple is that we can twist and turn it to do whatever we want it to do. Now, it may look awkward to read and write, but I don't expect anyone to use <strong>Brim</strong> to do real life stuff, so it's <em>okay</em> for <strong>Brim</strong> to be this obtuse.</p>
+<pre style="background-color:#2e3440;color:#d8dee9;"><code><span>(fun (factorial x)
+</span><span>     (if (= n 1) //if n == 1
+</span><span>         1 // then return 1  
+</span><span>         (* n (factorial (- n 1))))) // else return n * (n - 1)!
+</span></code></pre>
+<p><strong>Brim</strong> is just lists of numbers and symbols. That’s it. The consequence of <strong>Brim</strong> being this simple is that we can twist and turn it to do whatever we want it to do. Now, it may look awkward to read and write, but I don’t expect anyone to use <strong>Brim</strong> to do real life stuff, so it’s <em>okay</em> for <strong>Brim</strong> to be this obtuse.</p>
 <p>I will be using the <a href="https://ziglang.org/">Zig</a> programming language to implement <strong>Brim</strong>, but it should be easy enough for you to follow along with the language of your choice. I will also try and show you how some important pieces of code would look like in some other popular programming languages(like <a href="https://foundation.rust-lang.org/">Rust</a> and <a href="https://www.python.org/">Python</a>), to keep it as generic and instructive as I can. But I am assuming the person reading(you 🫵) knows how to program stuff, so I may skip over something I feel all programmers <em>would</em> know. If you do not understand something, feel free to reach out to me and ask!</p>
 <h2 id="the-next-step">The next step</h2>
 <p>The pipeline of our compiler/interpreter would look something like this:
 <img src="https://wags-1314.github.io/blog/pltut-1/chart.png" alt="chart" /></p>
-<p>The first stage is the <em>lexer</em> which takes in a program and spits out a list of <em>tokens</em>. A token is the indivisible unit of your program. A <strong>Brim</strong> program is made out of (for now...) 4 indivisible tokens:</p>
+<p>The first stage is the <em>lexer</em> which takes in a program and spits out a list of <em>tokens</em>. A token is the indivisible unit of your program. A <strong>Brim</strong> program is made out of (for now…) 4 indivisible tokens:</p>
 <ol>
 <li>numbers, like <code>12345</code></li>
 <li>symbols, like <code>fun</code>, <code>if</code>, <code>+</code></li>
 <li>brackets: <code>(</code> and <code>)</code></li>
 </ol>
 <p>A <strong>Brim</strong> program that looks like this:</p>
-<pre><code>(+ x 1)
-</code></pre>
+<pre style="background-color:#2e3440;color:#d8dee9;"><code><span>(+ x 1)
+</span></code></pre>
 <p>would be split into tokens as such:</p>
-<pre><code>`(:lparen` `+:symbol` `x:symbol` `1:number` `):rparen`
-</code></pre>
+<pre style="background-color:#2e3440;color:#d8dee9;"><code><span>`(:lparen` `+:symbol` `x:symbol` `1:number` `):rparen`
+</span></code></pre>
 <p>Then the <em>parser</em> gets the list of tokens, and tries to make sense of it. It is the responsibility of the parser to reject nonsensical programs like:</p>
-<pre><code>) 1 x + (
-</code></pre>
+<pre style="background-color:#2e3440;color:#d8dee9;"><code><span>) 1 x + (
+</span></code></pre>
 <p>Then if we are <em>interpreting</em> the program, we just run the program ourselves and spit out a what <code>x + 1</code> should be. If we are <em>compiling</em> the program we would spit out either assembly or some other language.</p>
 <p>In the next post we will talk about <em>tokens</em> and <em>lexers</em>.</p>
 

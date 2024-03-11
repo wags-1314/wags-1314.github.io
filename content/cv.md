@@ -23,7 +23,7 @@ I'm a Ph.D. student advised by Prof. Pavel Panchekha at the University of Utah. 
 - Formalised basic DFA/NFA constructions in Coq/Rocq
 - Some initial work adapted into undergraduate Discrete Structures course
 
-### Education
+# Education
 **Ph.D. in CS &mdash; University of Utah**
 - **CGPA:** 4.0/4.0; courses: PL, architecture, algorithms, verification
 - TA for CS 3810: Computer Organization
@@ -32,14 +32,14 @@ I'm a Ph.D. student advised by Prof. Pavel Panchekha at the University of Utah. 
 - **CGPA:** 8.9/10.0; Merit scholarship holder
 - TA for: OS, compilers, networks, architecture, VLSI design, and more
 
-### Skills
+# Skills
 **General Programming:** Python, Racket, Java, JavaScript, SQL
 
 **Systems Programming:** C/C++, Bash, Rust
 
 **Hardware:** Verilog, MASM
 
-### Projects
+# Projects
 **Trinity Game Engine:** A game engine and byte code VM for scripting [(source)](https://github.com/wags-1314/trinity)
 
 **Logic in Coq:** Classical propositional logic and natural deduction in Coq/Rocq [(source)](https://github.com/wags-1314/logic-in-Coq)

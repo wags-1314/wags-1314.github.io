@@ -2,6 +2,8 @@
 :root.dark {
   --bgColor: #2e3440;
   --fgColor: #d8dee9;
+  --invBgColor: #d8dee9;
+  --invFgColor: #2e3440;
   --metaColor: #bf616a;
   --headColor: #;
   --linkColor: #5E81AC;
@@ -27,6 +29,8 @@
 :root.light {
   --bgColor: #d8dee9;
   --fgColor: #2e3440;
+  --invBgColor: #2e3440;
+  --invFgColor: #d8dee9;
   --metaColor: #bf616a;
   --headColor: #;
   --linkColor: #5E81AC;
@@ -115,6 +119,17 @@ a {
   border: dashed .2rem var(--metaColor)
 }
 
+#statuscafe {
+    padding: .5em;
+    border: dashed .2rem var(--metaColor);
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+}
+
 a:focus,
 a:hover {
   background-color: var(--linkColor);
@@ -179,6 +194,37 @@ pre {
   font-style: monospace;
   white-space: pre-wrap; 
   word-break: break-word;
+}
+
+aside, details {
+  background-color: var(--invBgColor);
+  color: var(--invFgColor)
+}
+
+aside {
+  width: 35%;  
+  float: right;
+  font-style: italic;
+  overflow-x: auto;
+  word-break: break-word;
+  padding: 0 10px;
+  margin-left: 1em;
+}
+*[dir="rtl"] aside {
+  float: left;
+}
+
+/* make aside full-width on mobile */
+@media only screen and (max-width: 720px) {
+  aside {
+    width: 100%;
+    float: none;
+    margin-inline-start: 0;
+  }
+}
+
+details {
+  padding: .5rem;
 }
 
 p code,

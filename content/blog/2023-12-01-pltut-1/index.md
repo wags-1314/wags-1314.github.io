@@ -8,6 +8,10 @@ tags = ["pl-tutorial"]
 ## Making a Programming Language
 I think I finally have something to write about. While I am not an *expert* with programming languages, interpreters or compilers, I feel like it would be great to:
 
+```python
+print('Hello, World!')
+```
+
 1. put down in writing everything I know currently about programming languages,
 2. share to world everything I know.
 

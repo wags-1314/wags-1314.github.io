@@ -24,53 +24,55 @@
         
         <content type="html" xml:base="https://wags-1314.github.io/blog/pltut-1/">&lt;h2 id=&quot;making-a-programming-language&quot;&gt;Making a Programming Language&lt;&#x2F;h2&gt;
 &lt;p&gt;I think I finally have something to write about. While I am not an &lt;em&gt;expert&lt;&#x2F;em&gt; with programming languages, interpreters or compilers, I feel like it would be great to:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#88c0d0;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;#39;Hello, World!&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;ol&gt;
 &lt;li&gt;put down in writing everything I know currently about programming languages,&lt;&#x2F;li&gt;
 &lt;li&gt;share to world everything I know.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-&lt;p&gt;I also feel trying to write this down in an instructive way will help me to reinforce a lot of the stuff I have learned. And I love explaining stuff (it&#x27;s a lot of fun!). I recently took a course on Programming Languages by &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Matthew_Flatt&quot;&gt;Mathew&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;users.cs.utah.edu&#x2F;~mflatt&#x2F;&quot;&gt;Flatt&lt;&#x2F;a&gt;, one of the creators of the really neat &lt;a href=&quot;https:&#x2F;&#x2F;racket-lang.org&#x2F;&quot;&gt;Racket&lt;&#x2F;a&gt; programming language, and I&#x27;d like to re-implement a lot of the stuff I learned in the course.&lt;&#x2F;p&gt;
+&lt;p&gt;I also feel trying to write this down in an instructive way will help me to reinforce a lot of the stuff I have learned. And I love explaining stuff (it’s a lot of fun!). I recently took a course on Programming Languages by &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Matthew_Flatt&quot;&gt;Mathew&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;users.cs.utah.edu&#x2F;~mflatt&#x2F;&quot;&gt;Flatt&lt;&#x2F;a&gt;, one of the creators of the really neat &lt;a href=&quot;https:&#x2F;&#x2F;racket-lang.org&#x2F;&quot;&gt;Racket&lt;&#x2F;a&gt; programming language, and I’d like to re-implement a lot of the stuff I learned in the course.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;what-is-a-programming-language&quot;&gt;What is a Programming Language?&lt;&#x2F;h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A programming language is a system of notation for writing computer programs.&lt;&#x2F;p&gt;
 &lt;p&gt;— Wikipedia, The Free Encyclopedia&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;p&gt;A programming language is the primary interface with which humans tell computers what to do. A computer program is the list of instructions and a programming language is the &lt;em&gt;specification&lt;&#x2F;em&gt; of what those instructions look like. A computer, being an amalgamation of horrendous digital electronics, can only understand binary data, and a human understands &amp;quot;language&amp;quot;. &lt;em&gt;Compilers&lt;&#x2F;em&gt; and &lt;em&gt;interpreters&lt;&#x2F;em&gt; follow the specification, which is the programming language, and either:&lt;&#x2F;p&gt;
+&lt;p&gt;A programming language is the primary interface with which humans tell computers what to do. A computer program is the list of instructions and a programming language is the &lt;em&gt;specification&lt;&#x2F;em&gt; of what those instructions look like. A computer, being an amalgamation of horrendous digital electronics, can only understand binary data, and a human understands “language”. &lt;em&gt;Compilers&lt;&#x2F;em&gt; and &lt;em&gt;interpreters&lt;&#x2F;em&gt; follow the specification, which is the programming language, and either:&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;em&gt;compile&lt;&#x2F;em&gt; our program into assembly,&lt;&#x2F;li&gt;
-&lt;li&gt;or &lt;em&gt;interpret&lt;&#x2F;em&gt; and &amp;quot;act out&amp;quot; how the program is supposed to run on the computer.&lt;&#x2F;li&gt;
+&lt;li&gt;or &lt;em&gt;interpret&lt;&#x2F;em&gt; and “act out” how the program is supposed to run on the computer.&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;p&gt;In this tutorial, I want to talk about both &lt;em&gt;interpreters&lt;&#x2F;em&gt; and &lt;em&gt;compilers&lt;&#x2F;em&gt; and try to cover as many paradigms and techniques under the umbrella of programming languages as I can. We will build so many &lt;em&gt;interpreters&lt;&#x2F;em&gt; and &lt;em&gt;compilers&lt;&#x2F;em&gt; your head will spin.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;brim&quot;&gt;Brim&lt;&#x2F;h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Life&#x27;s enchanted cup sparkles near the brim.&lt;&#x2F;p&gt;
+&lt;p&gt;Life’s enchanted cup sparkles near the brim.&lt;&#x2F;p&gt;
 &lt;p&gt;— &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Lord_Byron&quot;&gt;Lord Byron&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;The language we will be building stuff for is called &lt;strong&gt;Brim&lt;&#x2F;strong&gt;. I named it &lt;strong&gt;Brim&lt;&#x2F;strong&gt; because I want it to be filled to the &lt;strong&gt;brim&lt;&#x2F;strong&gt; with ✨features✨. The specification of &lt;strong&gt;Brim&lt;&#x2F;strong&gt; is very very simple. Here is the factorial function in &lt;strong&gt;Brim&lt;&#x2F;strong&gt;:&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code&gt;(fun (factorial x)
-     (if (= n 1) &amp;#x2F;&amp;#x2F;if n == 1
-         1 &amp;#x2F;&amp;#x2F; then return 1  
-         (* n (factorial (- n 1))))) &amp;#x2F;&amp;#x2F; else return n * (n - 1)!
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;&lt;strong&gt;Brim&lt;&#x2F;strong&gt; is just lists of numbers and symbols. That&#x27;s it. The consequence of &lt;strong&gt;Brim&lt;&#x2F;strong&gt; being this simple is that we can twist and turn it to do whatever we want it to do. Now, it may look awkward to read and write, but I don&#x27;t expect anyone to use &lt;strong&gt;Brim&lt;&#x2F;strong&gt; to do real life stuff, so it&#x27;s &lt;em&gt;okay&lt;&#x2F;em&gt; for &lt;strong&gt;Brim&lt;&#x2F;strong&gt; to be this obtuse.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2e3440;color:#d8dee9;&quot;&gt;&lt;code&gt;&lt;span&gt;(fun (factorial x)
+&lt;&#x2F;span&gt;&lt;span&gt;     (if (= n 1) &#x2F;&#x2F;if n == 1
+&lt;&#x2F;span&gt;&lt;span&gt;         1 &#x2F;&#x2F; then return 1  
+&lt;&#x2F;span&gt;&lt;span&gt;         (* n (factorial (- n 1))))) &#x2F;&#x2F; else return n * (n - 1)!
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Brim&lt;&#x2F;strong&gt; is just lists of numbers and symbols. That’s it. The consequence of &lt;strong&gt;Brim&lt;&#x2F;strong&gt; being this simple is that we can twist and turn it to do whatever we want it to do. Now, it may look awkward to read and write, but I don’t expect anyone to use &lt;strong&gt;Brim&lt;&#x2F;strong&gt; to do real life stuff, so it’s &lt;em&gt;okay&lt;&#x2F;em&gt; for &lt;strong&gt;Brim&lt;&#x2F;strong&gt; to be this obtuse.&lt;&#x2F;p&gt;
 &lt;p&gt;I will be using the &lt;a href=&quot;https:&#x2F;&#x2F;ziglang.org&#x2F;&quot;&gt;Zig&lt;&#x2F;a&gt; programming language to implement &lt;strong&gt;Brim&lt;&#x2F;strong&gt;, but it should be easy enough for you to follow along with the language of your choice. I will also try and show you how some important pieces of code would look like in some other popular programming languages(like &lt;a href=&quot;https:&#x2F;&#x2F;foundation.rust-lang.org&#x2F;&quot;&gt;Rust&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;www.python.org&#x2F;&quot;&gt;Python&lt;&#x2F;a&gt;), to keep it as generic and instructive as I can. But I am assuming the person reading(you 🫵) knows how to program stuff, so I may skip over something I feel all programmers &lt;em&gt;would&lt;&#x2F;em&gt; know. If you do not understand something, feel free to reach out to me and ask!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;the-next-step&quot;&gt;The next step&lt;&#x2F;h2&gt;
 &lt;p&gt;The pipeline of our compiler&#x2F;interpreter would look something like this:
 &lt;img src=&quot;https:&#x2F;&#x2F;wags-1314.github.io&#x2F;blog&#x2F;pltut-1&#x2F;chart.png&quot; alt=&quot;chart&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;The first stage is the &lt;em&gt;lexer&lt;&#x2F;em&gt; which takes in a program and spits out a list of &lt;em&gt;tokens&lt;&#x2F;em&gt;. A token is the indivisible unit of your program. A &lt;strong&gt;Brim&lt;&#x2F;strong&gt; program is made out of (for now...) 4 indivisible tokens:&lt;&#x2F;p&gt;
+&lt;p&gt;The first stage is the &lt;em&gt;lexer&lt;&#x2F;em&gt; which takes in a program and spits out a list of &lt;em&gt;tokens&lt;&#x2F;em&gt;. A token is the indivisible unit of your program. A &lt;strong&gt;Brim&lt;&#x2F;strong&gt; program is made out of (for now…) 4 indivisible tokens:&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;numbers, like &lt;code&gt;12345&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;symbols, like &lt;code&gt;fun&lt;&#x2F;code&gt;, &lt;code&gt;if&lt;&#x2F;code&gt;, &lt;code&gt;+&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;brackets: &lt;code&gt;(&lt;&#x2F;code&gt; and &lt;code&gt;)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;p&gt;A &lt;strong&gt;Brim&lt;&#x2F;strong&gt; program that looks like this:&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code&gt;(+ x 1)
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre style=&quot;background-color:#2e3440;color:#d8dee9;&quot;&gt;&lt;code&gt;&lt;span&gt;(+ x 1)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;would be split into tokens as such:&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code&gt;`(:lparen` `+:symbol` `x:symbol` `1:number` `):rparen`
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre style=&quot;background-color:#2e3440;color:#d8dee9;&quot;&gt;&lt;code&gt;&lt;span&gt;`(:lparen` `+:symbol` `x:symbol` `1:number` `):rparen`
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Then the &lt;em&gt;parser&lt;&#x2F;em&gt; gets the list of tokens, and tries to make sense of it. It is the responsibility of the parser to reject nonsensical programs like:&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code&gt;) 1 x + (
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre style=&quot;background-color:#2e3440;color:#d8dee9;&quot;&gt;&lt;code&gt;&lt;span&gt;) 1 x + (
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Then if we are &lt;em&gt;interpreting&lt;&#x2F;em&gt; the program, we just run the program ourselves and spit out a what &lt;code&gt;x + 1&lt;&#x2F;code&gt; should be. If we are &lt;em&gt;compiling&lt;&#x2F;em&gt; the program we would spit out either assembly or some other language.&lt;&#x2F;p&gt;
 &lt;p&gt;In the next post we will talk about &lt;em&gt;tokens&lt;&#x2F;em&gt; and &lt;em&gt;lexers&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
 </content>
